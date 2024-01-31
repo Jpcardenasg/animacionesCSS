@@ -60,7 +60,7 @@ fill-mode: Especifica cómo se deben aplicar los estilos al elemento antes y des
     height: 75px;
     left: 950px;
     top: 10px;
-    background-image: url("/storage/img/cloud.png");
+    background-image: url("../storage/img/cloud.png");
     background-repeat:  no-repeat;
     background-position: top;
     z-index: 5;
@@ -70,7 +70,7 @@ fill-mode: Especifica cómo se deben aplicar los estilos al elemento antes y des
 .rain {
     width: 200px;
     height: 400px;
-    background-image: url("/storage/img/rain-background.png");
+    background-image: url("../storage/img/rain-background.png");
     background-repeat: no-repeat;
     background-position: 0 320%;
     margin-top:65px;
@@ -78,7 +78,7 @@ fill-mode: Especifica cómo se deben aplicar los estilos al elemento antes y des
 }
 
 .sun {
-    background-image: url("/storage/img/sun.png");
+    background-image: url("../storage/img/sun.png");
     background-repeat: no-repeat;
     background-position: top left;
     width: 70px;
@@ -92,7 +92,7 @@ fill-mode: Especifica cómo se deben aplicar los estilos al elemento antes y des
 .flower {
     width: 90px;
     height: 130px;
-    background-image: url("/storage/img/flower.png");
+    background-image: url("../storage/img/flower.png");
     background-repeat: no-repeat;
     background-position: 0 130px;
     bottom: 5px;
