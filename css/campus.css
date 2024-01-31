@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+/* name: Nombre de la animación definida con @keyframes.
+
+duration: Duración de la animación. Puede ser un valor en segundos (s) o milisegundos (ms).
+
+timing-function: Función de temporización que controla cómo se distribuyen los estilos a lo largo de la duración de la animación. Pueden ser valores como ease, linear, ease-in, ease-out, ease-in-out, etc.
+
+delay: Tiempo antes de que comience la animación. Puede ser un valor en segundos (s) o milisegundos (ms).
+
+iteration-count: Número de veces que se repetirá la animación. Puede ser un número entero, infinite para repetir infinitamente, o un valor específico como 2 para repetir dos veces.
+
+direction: Dirección de la animación. Puede ser normal, reverse, alternate, o alternate-reverse. Controla la dirección en la que se ejecuta la animación.
+    normal: La animación se ejecuta de principio a fin.
+    reverse: La animación se ejecuta de fin a principio.
+    alternate: La animación se ejecuta de principio a fin en la primera iteración, luego de fin a principio en la segunda iteración, y así sucesivamente.
+    alternate-reverse: Similar a alternate, pero la primera iteración se ejecuta de fin a principio.
+
+fill-mode: Especifica cómo se deben aplicar los estilos al elemento antes y después de la ejecución de la animación. Puede ser none, forwards, backwards, o both.
+    none: No hay efecto en los estilos antes o después de la animación.
+    forwards: Los estilos finales de la animación se aplican después de la última iteración.
+    backwards: Los estilos iniciales de la animación se aplican antes de que comience la animación.
+    both: Combina los efectos de forwards y backwards.
+
+*/
+
+.animation {
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    background-image: url("/storage/img/background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.cloud, .message, .rain, .sun, .flower {
+    position: absolute;
+}
+
+.message {
+    width: 200px;
+    height: 60px;
+    background-image: url("/storage/img/mensaje.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    left: 400px;
+    top: 200px;
+    animation: message-animation 35s linear 0s 1 normal forwards;
+}
+
+.cloud {
+    width: 0;
+    height: 75px;
+    left: 950px;
+    top: 10px;
+    background-image: url("/storage/img/cloud.png");
+    background-repeat:  no-repeat;
+    background-position: top;
+    z-index: 5;
+    animation: cloud-animation 20s linear 5s 1 normal;
+}
+
+.rain {
+    width: 200px;
+    height: 400px;
+    background-image: url("/storage/img/rain-background.png");
+    background-repeat: no-repeat;
+    background-position: 0 320%;
+    margin-top:65px;
+    animation: rain-animation 8s linear 10s 1 normal;
+}
+
+.sun {
+    background-image: url("/storage/img/sun.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 70px;
+    height: 70px;
+    opacity: 0.2;
+    top:20px;
+    left: 700px;
+    animation: sun-animation 2s ease-out 23s infinite alternate;
+}
+
+.flower {
+    width: 90px;
+    height: 130px;
+    background-image: url("/storage/img/flower.png");
+    background-repeat: no-repeat;
+    background-position: 0 130px;
+    bottom: 5px;
+    left: 425px;
+    animation: flower-animation 3s ease-out 27s 1 normal forwards;
+}
+
+@keyframes message-animation {
+    0% {
+        background-position: 0 0;
+        opacity: 1;
+    }
+
+    2% {
+        background-position: 0 0;
+        opacity: 0;
+    }
+
+    3% {
+        background-position: 0 -56px;
+        opacity: 0;
+    }
+
+    5% {
+        background-position: 0 -56px;
+        opacity: 1;
+    }
+
+    7% {
+        background-position: 0 -56px;
+       opacity: 0;
+    }
+
+    8% {
+        background-position: 0 -110px;
+        opacity: 0;
+    }
+
+    10% {
+        background-position: 0 -110px;
+        opacity: 1;
+    }
+
+    12% {
+        background-position: 0 -110px;
+       opacity: 0;
+    }
+
+    13% {
+        background-position: 0 -160px;
+        opacity: 0;
+    }
+
+    15% {
+        background-position: 0 -160px;
+        opacity: 1;
+    }
+
+    17% {
+        background-position: 0 -160px;
+        opacity: 0;
+    }
+
+    100% {
+        background-position: 0 -160px;
+        opacity: 0;
+    }
+}
+
+@keyframes cloud-animation {
+    0% {
+        left: 950px;
+    }
+
+    10% {
+        left: 750px;
+        width: 200px;
+    }
+
+    30% {
+        left: 375px;
+    }
+
+    60% {
+        left: 375px;
+    }
+
+    85% {
+        left: 0;
+        width: 200px;
+        background-position: 0 0;
+    }
+
+    100% {
+        left: 0;
+        width: 0;
+        background-position: -200px 0;
+    }
+}
+
+@keyframes rain-animation {
+
+    100% {
+        background-position: 0 -220%;
+    }
+}
+
+@keyframes sun-animation {
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes flower-animation {
+
+    100% {
+        background-position: 0 0;
+    }
+}
+

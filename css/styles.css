@@ -1,0 +1,37 @@
+
+
+.nino {
+    height: 400px;
+    width: 400px;
+    background-image: url(storage/img/nino-yoyo.png);
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+
+.limite {
+    width: 50px;
+    height: 90px;
+    position: relative;
+    left: 152.499993px;
+    top: 99px;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 20ms;
+    overflow-y: hidden;
+    background-image: url(storage/img/yoyo.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto;
+
+
+}
+
+
+.limite:hover {
+    height: 200px;
+}
+
+
+
+
